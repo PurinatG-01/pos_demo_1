@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pos_1/app_router.dart';
 import 'package:pos_1/firebase_options.dart';
+import 'package:pos_1/services/app_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,6 +11,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
+  await initService();
   runApp(App());
 }
 
