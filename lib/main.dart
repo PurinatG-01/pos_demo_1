@@ -1,8 +1,17 @@
 // assuming this is the root widget of your App
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pos_1/app_router.dart';
+import 'package:pos_1/firebase_options.dart';
 
-void main() => runApp(App());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  runApp(App());
+}
 
 class App extends StatelessWidget {
   // make sure you don't initiate your router

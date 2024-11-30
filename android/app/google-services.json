@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "863364334349",
+    "project_id": "pos-demo-1",
+    "storage_bucket": "pos-demo-1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863364334349:android:5a038d5e858e451fb5e644",
+        "android_client_info": {
+          "package_name": "com.purinatg.pos1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADMglOuslwX4wKkvklKjpb1BuQ5xXu44Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
