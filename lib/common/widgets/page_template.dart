@@ -28,16 +28,21 @@ class PageTemplate extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
+    final currentIndex = itemList.indexWhere(
+      (item) => context.routeData.path == item.appPath.path,
+    );
     return Scaffold(
       appBar: AppBar(
         title: Text("POS Demo #1", style: TextStyle(fontSize: 18)),
       ),
       body: child,
       bottomNavigationBar: BottomNavigationBar(
-          onTap: (index) {
-            itemList[index].onTap.call(context);
-          },
-          items: itemList),
+        onTap: (index) {
+          itemList[index].onTap.call(context);
+        },
+        items: itemList,
+        currentIndex: currentIndex != -1 ? currentIndex : 0,
+      ),
     );
   }
 }
